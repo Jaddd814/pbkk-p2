@@ -1,5 +1,6 @@
 # PBKK C - P2
-Tugas PBKK C pertemuan ke-2
+Tugas PBKK C pertemuan ke-2  
+Al Jad Kaukabudduri Hardianto 5025241248
 
 1. Struktur data
 ```
