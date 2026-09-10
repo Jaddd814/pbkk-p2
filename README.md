@@ -2,7 +2,7 @@
 Tugas PBKK C pertemuan ke-2  
 Al Jad Kaukabudduri Hardianto 5025241248
 
-1. Struktur data
+1. Struktur data  
 ```
 namespace DataMahasiswa
 {
@@ -27,14 +27,14 @@ namespace DataMahasiswa
         static List<Mahasiswa> daftarMahasiswa = new List<Mahasiswa>();
     }
 }
-```
-`namespace DataMahasiswa` adalah wadah untuk mengelompokkan class yang berkaitan dengan aplikasi data mahasiswa.
-`class Mahasiswa` adalah cetakan/template untuk satu data mahasiswa.
-`NIM, Nama, Prodi, dan IPK` adalah properti yang dimiliki setiap mahasiswa.
-`daftarMahasiswa` adalah list yang menyimpan semua objek mahasiswa.
-`static` membuat `daftarMahasiswa` bisa dipakai langsung oleh method lain dalam class Program.
+```  
+`namespace DataMahasiswa` adalah wadah untuk mengelompokkan class yang berkaitan dengan aplikasi data mahasiswa.  
+`class Mahasiswa` adalah cetakan/template untuk satu data mahasiswa.  
+`NIM, Nama, Prodi, dan IPK` adalah properti yang dimiliki setiap mahasiswa.  
+`daftarMahasiswa` adalah list yang menyimpan semua objek mahasiswa.  
+`static` membuat `daftarMahasiswa` bisa dipakai langsung oleh method lain dalam class Program.  
 
-2. Tampilan menu
+2. Tampilan menu  
 ```
 static void TampilkanMenu()
 {
@@ -50,14 +50,14 @@ static void TampilkanMenu()
     Console.WriteLine("5. Keluar");
     Console.WriteLine("========================================");
 }
-```
-`static void TampilkanMenu()` adalah method untuk menampilkan menu utama.
-`Console.Clear()` membersihkan tampilan console sebelum menu ditampilkan lagi.
-`Console.WriteLine()` menampilkan teks lalu pindah ke baris berikutnya.
-Dokumentasi: 
-<img width="375" height="222" alt="Screenshot 2026-09-10 152918" src="https://github.com/user-attachments/assets/adde012b-8de1-435c-afb7-735e87ee59a8" />
+```  
+`static void TampilkanMenu()` adalah method untuk menampilkan menu utama.  
+`Console.Clear()` membersihkan tampilan console sebelum menu ditampilkan lagi.  
+`Console.WriteLine()` menampilkan teks lalu pindah ke baris berikutnya.  
+Dokumentasi:   
+<img width="375" height="222" alt="Screenshot 2026-09-10 152918" src="https://github.com/user-attachments/assets/adde012b-8de1-435c-afb7-735e87ee59a8" />  
 
-3. Fitur tambah mahasiswa
+3. Fitur tambah mahasiswa  
 ```
 static void TambahMahasiswa()
 {
@@ -99,16 +99,16 @@ static void TambahMahasiswa()
     Console.WriteLine();
     Console.WriteLine("Data mahasiswa berhasil ditambahkan.");
 }
-```
-`Console.Clear()` membersihkan menu utama agar pengguna fokus pada halaman input.
-`Console.Write()` meminta pengguna memasukkan NIM, nama, dan program studi.
-`while (true)` membuat program terus meminta IPK sampai input valid.
-`double.TryParse(...)` memastikan bahwa input IPK benar-benar angka desimal.
-`ipk >= 0 && ipk <= 4` Jika valid, `break` menghentikan perulangan. Jika salah, akan menampilkan pesan "IPK harus berupa angka 0 - 4."
-Dokumentasi:
-<img width="381" height="281" alt="Screenshot 2026-09-10 152811" src="https://github.com/user-attachments/assets/5ba2ec00-4d4a-40c2-a324-ab846c7cf855" />
+```  
+`Console.Clear()` membersihkan menu utama agar pengguna fokus pada halaman input.  
+`Console.Write()` meminta pengguna memasukkan NIM, nama, dan program studi.  
+`while (true)` membuat program terus meminta IPK sampai input valid.  
+`double.TryParse(...)` memastikan bahwa input IPK benar-benar angka desimal.  
+`ipk >= 0 && ipk <= 4` Jika valid, `break` menghentikan perulangan. Jika salah, akan menampilkan pesan "IPK harus berupa angka 0 - 4."  
+Dokumentasi:  
+<img width="381" height="281" alt="Screenshot 2026-09-10 152811" src="https://github.com/user-attachments/assets/5ba2ec00-4d4a-40c2-a324-ab846c7cf855" />  
 
-4. Fitur list mahasiswa
+4. Fitur list mahasiswa  
 ```
 static void TampilkanMahasiswa()
 {
@@ -147,13 +147,13 @@ static void TampilkanMahasiswa()
 
     Console.WriteLine("==========================================================");
 }
-```
-`daftarMahasiswa.Count` menghitung jumlah data mahasiswa dalam list.
-Jika jumlah datanya 0 akan mengeluarkan pesan "Belum ada data mahasiswa."
-Dokumentasi:
-<img width="660" height="221" alt="Screenshot 2026-09-10 152838" src="https://github.com/user-attachments/assets/f962ec89-8038-4fa8-90c7-8bd2b32627d3" />
+```  
+`daftarMahasiswa.Count` menghitung jumlah data mahasiswa dalam list.  
+Jika jumlah datanya 0 akan mengeluarkan pesan "Belum ada data mahasiswa."  
+Dokumentasi:  
+<img width="660" height="221" alt="Screenshot 2026-09-10 152838" src="https://github.com/user-attachments/assets/f962ec89-8038-4fa8-90c7-8bd2b32627d3" />  
 
-5. Fitur cari mahasiswa
+5. Fitur cari mahasiswa  
 ```
 static void CariMahasiswa()
 {
@@ -192,15 +192,15 @@ static void CariMahasiswa()
         Console.WriteLine("Mahasiswa dengan NIM tersebut tidak ditemukan.");
     }
 }
-```
-`nimCari` menyimpan NIM dari pengguna.
-`foreach` memeriksa seluruh mahasiswa yang tersimpan di daftarMahasiswa.
-`StringComparison.OrdinalIgnoreCase` berarti perbandingan tidak membedakan huruf besar dan kecil.
-Jika `mahasiswaDitemukan != null`, program menampilkan seluruh data mahasiswa.
-Dokumentasi:
-<img width="371" height="288" alt="Screenshot 2026-09-10 152852" src="https://github.com/user-attachments/assets/205461ba-8833-4f78-9bca-d223088d41cd" />
+```  
+`nimCari` menyimpan NIM dari pengguna.  
+`foreach` memeriksa seluruh mahasiswa yang tersimpan di daftarMahasiswa.  
+`StringComparison.OrdinalIgnoreCase` berarti perbandingan tidak membedakan huruf besar dan kecil.  
+Jika `mahasiswaDitemukan != null`, program menampilkan seluruh data mahasiswa.  
+Dokumentasi:  
+<img width="371" height="288" alt="Screenshot 2026-09-10 152852" src="https://github.com/user-attachments/assets/205461ba-8833-4f78-9bca-d223088d41cd" />  
 
-6. Fitur hapus mahasiswa
+6. Fitur hapus mahasiswa  
 ```
 static void HapusMahasiswa()
 {
@@ -237,18 +237,18 @@ static void HapusMahasiswa()
         Console.WriteLine("Data mahasiswa tidak ditemukan.");
     }
 }
-```
-`nimHapus` menyimpan NIM input pengguna.
-Program melakukan pencarian seperti pada fitur cari mahasiswa
-`Remove()` menghapus objek mahasiswa tersebut dari daftarMahasiswa.
-Dokumentasi:
-<img width="372" height="200" alt="Screenshot 2026-09-10 152907" src="https://github.com/user-attachments/assets/1c4829db-bdc4-4f97-9350-79c4352c2028" />
+```  
+`nimHapus` menyimpan NIM input pengguna.  
+Program melakukan pencarian seperti pada fitur cari mahasiswa.  
+`Remove()` menghapus objek mahasiswa tersebut dari daftarMahasiswa.  
+Dokumentasi:  
+<img width="372" height="200" alt="Screenshot 2026-09-10 152907" src="https://github.com/user-attachments/assets/1c4829db-bdc4-4f97-9350-79c4352c2028" />  
 
-7. Fitur keluar
+7. Fitur keluar  
 ```
 case 5:
     Console.WriteLine("Terima kasih telah menggunakan program.");
     break;
-```
-Dokumentasi:
+```  
+Dokumentasi:  
 <img width="377" height="292" alt="Screenshot 2026-09-10 152927" src="https://github.com/user-attachments/assets/60e21856-8fb7-4c3e-8378-395fed9c5275" />
